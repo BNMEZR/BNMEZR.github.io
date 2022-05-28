@@ -1,0 +1,9 @@
+<textarea id="par" placeholder="Your text here"></textarea><br>
+<textarea id="par1" disabled></textarea><br>
+<button onclick="convert()" type="submit">Convert</button>
+<script> 
+function convert() {
+let arr=[ ], par = document.querySelector("#par").value.split(" ")
+document.querySelector("#par1").value = par.map(p=> p? p[0].toUpperCase() + p.split("").slice(1).join(""): undefined).join(" ")
+}
+</script>
